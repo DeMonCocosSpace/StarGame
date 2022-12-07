@@ -10,7 +10,9 @@
                     };
                     function __define (exports, require, module) {
                         if (!nodeEnv) {__quick_compile_project__.registerModule(__filename, module);}
-require('./assets/scripts/player');
+require('./assets/scripts/Game');
+require('./assets/scripts/Player');
+require('./assets/scripts/Star');
 
                     }
                     if (nodeEnv) {
