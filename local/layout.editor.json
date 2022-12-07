@@ -1,0 +1,118 @@
+{
+  "version": "1.1.1",
+  "windows": {
+    "main": {
+      "main": true,
+      "url": "app://editor/index.html",
+      "windowType": "dockable",
+      "x": 267,
+      "y": 136,
+      "width": 1280,
+      "height": 744,
+      "layout": {
+        "type": "dock-h",
+        "children": [
+          {
+            "width": 304,
+            "height": 654.5,
+            "type": "dock-v",
+            "children": [
+              {
+                "width": 304,
+                "height": 226,
+                "type": "panel",
+                "active": 0,
+                "children": [
+                  "hierarchy"
+                ]
+              },
+              {
+                "width": 304,
+                "height": 425.5,
+                "type": "panel",
+                "active": 0,
+                "children": [
+                  "assets"
+                ]
+              }
+            ]
+          },
+          {
+            "width": 666,
+            "height": 654.5,
+            "type": "panel",
+            "active": 0,
+            "children": [
+              "scene"
+            ]
+          },
+          {
+            "width": 304,
+            "height": 654.5,
+            "type": "panel",
+            "active": 0,
+            "children": [
+              "inspector",
+              "cocos-services"
+            ]
+          }
+        ]
+      },
+      "panels": [
+        "hierarchy",
+        "assets",
+        "scene",
+        "inspector",
+        "cocos-services"
+      ]
+    },
+    " common-asset-worker-worker": {},
+    "window-1670408689609": {
+      "main": false,
+      "url": "unpack://static/window.html",
+      "windowType": "dockable",
+      "x": 710,
+      "y": 233,
+      "width": 500,
+      "height": 528,
+      "layout": {
+        "type": "dock-v",
+        "children": [
+          {
+            "width": 500,
+            "height": 500,
+            "type": "panel",
+            "active": 0,
+            "children": [
+              "game-window"
+            ]
+          }
+        ]
+      },
+      "panels": [
+        "game-window"
+      ]
+    }
+  },
+  "panels": {
+    "console": {
+      "x": 760,
+      "y": 333,
+      "width": 404,
+      "height": 328
+    },
+    "timeline": {
+      "x": 760,
+      "y": 333,
+      "width": 504,
+      "height": 328
+    },
+    "game-window": {
+      "x": 710,
+      "y": 233,
+      "width": 500,
+      "height": 528
+    }
+  },
+  "panelLabelWidth": {}
+}
