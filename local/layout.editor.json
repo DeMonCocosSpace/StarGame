@@ -66,33 +66,7 @@
         "cocos-services"
       ]
     },
-    " common-asset-worker-worker": {},
-    "window-1670408689609": {
-      "main": false,
-      "url": "unpack://static/window.html",
-      "windowType": "dockable",
-      "x": 710,
-      "y": 233,
-      "width": 500,
-      "height": 528,
-      "layout": {
-        "type": "dock-v",
-        "children": [
-          {
-            "width": 500,
-            "height": 500,
-            "type": "panel",
-            "active": 0,
-            "children": [
-              "game-window"
-            ]
-          }
-        ]
-      },
-      "panels": [
-        "game-window"
-      ]
-    }
+    " common-asset-worker-worker": {}
   },
   "panels": {
     "console": {
