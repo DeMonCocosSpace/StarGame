@@ -32,6 +32,10 @@ cc.Class({
         maxMoveSpeed: 0,
         // 加速度
         accel: 0,
+        jumpAudio: {
+            default: null,
+            type: cc.AudioClip
+        }
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -101,9 +105,16 @@ cc.Class({
         var jumpUp = cc.tween().by(this.jumpDuration, { y: this.jumpHeight }, { easing: 'sineOut' });
         //下落
         var jumpDown = cc.tween().by(this.jumpDuration, { y: -this.jumpHeight }, { easing: 'sineIn' });
-        //创建一个缓动，按 jumpUp、jumpDown 的顺序执行动作
-        var tween = cc.tween().sequence(jumpUp, jumpDown);
+        //创建一个缓动=
+        var tween = cc.tween()
+            //按 jumpUp、jumpDown 的顺序执行动作
+            .sequence(jumpUp, jumpDown)
+            .call(this.playJumpSound, this);
         //不断重复
         return cc.tween().repeatForever(tween);
+    },
+    playJumpSound() {
+        // 调用声音引擎播放声音
+        cc.audioEngine.playEffect(this.jumpAudio, false)
     }
 });

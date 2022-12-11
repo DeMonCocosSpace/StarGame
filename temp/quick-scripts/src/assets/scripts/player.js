@@ -35,7 +35,11 @@ cc.Class({
     // 最大移动速度
     maxMoveSpeed: 0,
     // 加速度
-    accel: 0
+    accel: 0,
+    jumpAudio: {
+      "default": null,
+      type: cc.AudioClip
+    }
   },
   // LIFE-CYCLE CALLBACKS:
   onLoad: function onLoad() {
@@ -109,11 +113,16 @@ cc.Class({
       y: -this.jumpHeight
     }, {
       easing: 'sineIn'
-    }); //创建一个缓动，按 jumpUp、jumpDown 的顺序执行动作
+    }); //创建一个缓动=
 
-    var tween = cc.tween().sequence(jumpUp, jumpDown); //不断重复
+    var tween = cc.tween() //按 jumpUp、jumpDown 的顺序执行动作
+    .sequence(jumpUp, jumpDown).call(this.playJumpSound, this); //不断重复
 
     return cc.tween().repeatForever(tween);
+  },
+  playJumpSound: function playJumpSound() {
+    // 调用声音引擎播放声音
+    cc.audioEngine.playEffect(this.jumpAudio, false);
   }
 });
 
