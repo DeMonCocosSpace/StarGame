@@ -5,6 +5,8 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
+import Star from "./Star";
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
@@ -35,10 +37,10 @@ export default class Game extends cc.Component {
     maxStarDuration = 0; //星星生成的随机最大时间
 
 
+    timer = 0; //计时器
+    starDuration; //星星存在时间
 
     private groundY = 0;//地面高度
-    private timer = 0; //计时器
-    private starDuration; //星星存在时间
     private score = 0; //得分
 
     onLoad() {
@@ -90,6 +92,8 @@ export default class Game extends cc.Component {
         this.node.addChild(newStar);
         //根据随机位置生成星星
         newStar.setPosition(this.getNewStarPos());
+        //传Game给Star调用
+        newStar.getComponent(Star).init(this);
 
         //重置计时器，根据消失时间范围随机取一个值
         this.starDuration = this.minStarDuration + Math.random() * (this.maxStarDuration - this.minStarDuration);

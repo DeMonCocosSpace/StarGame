@@ -29,8 +29,16 @@ export default class Player extends cc.Component {
     onLoad() {
         this.jumpAction();
 
+        this.setInputControl();
+    }
+
+    setInputControl() {
+        //add keyboard input listener to jump, turnLeft and turnRight
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
+        // touch input
+        this.node.parent.on(cc.Node.EventType.TOUCH_START, this.onTouchBegan, this);
+        this.node.parent.on(cc.Node.EventType.TOUCH_END, this.onTouchEnded, this);
     }
 
     onKeyDown(event: cc.Event.EventKeyboard) {
@@ -53,6 +61,24 @@ export default class Player extends cc.Component {
                 this.accLeft = false;
                 break;
         }
+    }
+
+    onTouchBegan(event) {
+        var touchLoc = event.getLocation();
+        if (touchLoc.x >= cc.winSize.width / 2) {
+            this.accLeft = false;
+            this.accRight = true;
+        } else {
+            this.accLeft = true;
+            this.accRight = false;
+        }
+        // don't capture the event
+        return true;
+    }
+
+    onTouchEnded(event) {
+        this.accLeft = false;
+        this.accRight = false;
     }
 
     update(dt) {

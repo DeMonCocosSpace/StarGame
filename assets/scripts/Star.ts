@@ -5,6 +5,8 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
+import Game from "./Game";
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
@@ -14,22 +16,24 @@ export default class Star extends cc.Component {
     pickRadius = 0;
 
     //当前场景的脚本
-    private game = null;
+    private game: Game = null;
 
     onLoad() {
-        this.game = this.node.parent.getComponent('Game');
 
+    }
+
+    init(game: Game) {
+        this.game = game;
     }
 
     //获取主角与星星间的距离
     getDistance() {
         let playerPos = this.game.player.position;
-        console.log('(' + playerPos.x + ',' + playerPos.y + '+)');
+        //console.log('(' + playerPos.x + ',' + playerPos.y + '+)');
         let distance = this.node.position.sub(playerPos).mag();
         return distance;
     }
-
-
+    //主角摘到星星
     onPicked() {
         // 当星星被收集时，调用 Game 脚本中的接口，生成一个新的星星
         this.game.spawnNewStar();
@@ -43,6 +47,11 @@ export default class Star extends cc.Component {
             this.onPicked();
             return;
         }
+
+        // 根据 Game 脚本中的计时器更新星星的透明度
+        let opacityRatio = 1 - this.game.timer / this.game.starDuration;
+        const minOpacity = 50;
+        this.node.opacity = minOpacity + Math.floor(opacityRatio * (255 - minOpacity));
     }
 
 
