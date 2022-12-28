@@ -1,75 +1,122 @@
-2022-12-28T06:01:29.270Z - success: protocol editor-framework registered
-2022-12-28T06:01:29.270Z - success: protocol app registered
-2022-12-28T06:01:29.270Z - success: protocol theme registered
-2022-12-28T06:01:29.270Z - success: protocol packages registered
-2022-12-28T06:01:29.277Z - normal: Load ~/.CocosCreator/settings.json
-2022-12-28T06:01:29.286Z - success: protocol uuid registerred
-2022-12-28T06:01:29.286Z - success: protocol db registerred
-2022-12-28T06:01:29.286Z - success: protocol thumbnail registerred
-2022-12-28T06:01:29.321Z - normal: Initializing Asset Database
-2022-12-28T06:01:29.322Z - normal: checking language setting...
-2022-12-28T06:01:29.322Z - normal: Language: zh
-2022-12-28T06:01:29.323Z - success: protocol unpack registerred
-2022-12-28T06:01:29.323Z - success: protocol disable-commonjs registerred
-2022-12-28T06:01:29.688Z - normal: connected!
-2022-12-28T06:01:29.978Z - normal: Check project /Users/admin/ITCode/StarGame
-2022-12-28T06:01:29.980Z - normal: Initializing project /Users/admin/ITCode/StarGame
-2022-12-28T06:01:30.101Z - success: adapters loaded
-2022-12-28T06:01:30.102Z - success: asset-db-debugger loaded
-2022-12-28T06:01:30.132Z - success: fb-audience-network loaded
-2022-12-28T06:01:30.148Z - success: fb-live-stream loaded
-2022-12-28T06:01:30.150Z - success: google-play-instant loaded
-2022-12-28T06:01:30.150Z - success: jsb-adapter loaded
-2022-12-28T06:01:30.152Z - success: package-manager loaded
-2022-12-28T06:01:30.152Z - success: runtime-adapters loaded
-2022-12-28T06:01:30.153Z - success: runtime-dev-tools loaded
-2022-12-28T06:01:30.154Z - success: ui-kit-preview-extra loaded
-2022-12-28T06:01:30.155Z - success: ui-kit-preview loaded
-2022-12-28T06:01:30.491Z - success: alipay-minigame loaded
-2022-12-28T06:01:30.494Z - success: assets loaded
-2022-12-28T06:01:30.496Z - success: baidugame-opendata loaded
-2022-12-28T06:01:30.497Z - success: baidugame loaded
-2022-12-28T06:01:30.498Z - success: builder loaded
-2022-12-28T06:01:30.499Z - success: bytedance-opendata loaded
-2022-12-28T06:01:30.501Z - success: bytedance loaded
-2022-12-28T06:01:30.502Z - success: channel-upload-tools loaded
-2022-12-28T06:01:30.564Z - success: cloud-function loaded
-2022-12-28T06:01:30.650Z - success: cocos-services loaded
-2022-12-28T06:01:30.652Z - success: console loaded
-2022-12-28T06:01:30.653Z - success: curve-editor loaded
-2022-12-28T06:01:30.658Z - success: fb-instant-games loaded
-2022-12-28T06:01:30.660Z - success: game-window loaded
-2022-12-28T06:01:30.660Z - success: google-instant-games loaded
-2022-12-28T06:01:30.662Z - success: hierarchy loaded
-2022-12-28T06:01:30.663Z - success: huawei-agc loaded
-2022-12-28T06:01:30.665Z - success: huawei-runtime loaded
-2022-12-28T06:01:30.666Z - success: inspector loaded
-2022-12-28T06:01:30.674Z - success: cpk-publish loaded
-2022-12-28T06:01:30.674Z - success: keystore loaded
-2022-12-28T06:01:30.683Z - success: link-sure-runtime loaded
-2022-12-28T06:01:30.688Z - success: node-library loaded
-2022-12-28T06:01:30.688Z - success: open-recent-items loaded
-2022-12-28T06:01:30.689Z - success: oppo-runtime loaded
-2022-12-28T06:01:30.691Z - success: package-asset loaded
-2022-12-28T06:01:30.691Z - success: preferences loaded
-2022-12-28T06:01:30.693Z - success: project-importer loaded
-2022-12-28T06:01:30.695Z - success: project-settings loaded
-2022-12-28T06:01:30.702Z - success: qtt-runtime loaded
-2022-12-28T06:01:30.703Z - success: scene loaded
-2022-12-28T06:01:30.704Z - success: simulator-debugger loaded
-2022-12-28T06:01:30.704Z - success: sprite-editor loaded
-2022-12-28T06:01:30.735Z - success: store loaded
-2022-12-28T06:01:30.739Z - success: taobao-creativeapp loaded
-2022-12-28T06:01:30.741Z - success: timeline loaded
-2022-12-28T06:01:30.744Z - success: vivo-runtime loaded
-2022-12-28T06:01:30.745Z - success: wechatgame-opendata loaded
-2022-12-28T06:01:30.747Z - success: wechatgame loaded
-2022-12-28T06:01:30.749Z - success: xiaomi-runtime loaded
-2022-12-28T06:01:30.779Z - success: im-plugin loaded
-2022-12-28T06:01:30.779Z - success: preview server running at http://localhost:7456
-2022-12-28T06:01:31.156Z - normal: Initializing Cocos2d
-2022-12-28T06:01:31.287Z - normal: Initializing engine extends
-2022-12-28T06:01:33.629Z - info: Cocos Service load base data!
-2022-12-28T06:01:34.411Z - normal: Loading packages
-2022-12-28T06:01:34.412Z - normal: Run Application
-2022-12-28T06:01:36.222Z - success: cloud-function unloaded
+2022-12-28T06:16:37.920Z - success: protocol editor-framework registered
+2022-12-28T06:16:37.921Z - success: protocol app registered
+2022-12-28T06:16:37.921Z - success: protocol theme registered
+2022-12-28T06:16:37.921Z - success: protocol packages registered
+2022-12-28T06:16:37.928Z - normal: Load ~/.CocosCreator/settings.json
+2022-12-28T06:16:37.937Z - success: protocol uuid registerred
+2022-12-28T06:16:37.937Z - success: protocol db registerred
+2022-12-28T06:16:37.937Z - success: protocol thumbnail registerred
+2022-12-28T06:16:37.975Z - normal: Initializing Asset Database
+2022-12-28T06:16:37.976Z - normal: checking language setting...
+2022-12-28T06:16:37.976Z - normal: Language: zh
+2022-12-28T06:16:37.977Z - success: protocol unpack registerred
+2022-12-28T06:16:37.977Z - success: protocol disable-commonjs registerred
+2022-12-28T06:16:38.441Z - normal: connected!
+2022-12-28T06:16:38.872Z - normal: Check project /Users/admin/ITCode/StarGame
+2022-12-28T06:16:38.874Z - normal: Initializing project /Users/admin/ITCode/StarGame
+2022-12-28T06:16:39.004Z - success: adapters loaded
+2022-12-28T06:16:39.005Z - success: asset-db-debugger loaded
+2022-12-28T06:16:39.038Z - success: fb-audience-network loaded
+2022-12-28T06:16:39.055Z - success: fb-live-stream loaded
+2022-12-28T06:16:39.057Z - success: google-play-instant loaded
+2022-12-28T06:16:39.057Z - success: jsb-adapter loaded
+2022-12-28T06:16:39.059Z - success: package-manager loaded
+2022-12-28T06:16:39.059Z - success: runtime-adapters loaded
+2022-12-28T06:16:39.060Z - success: runtime-dev-tools loaded
+2022-12-28T06:16:39.061Z - success: ui-kit-preview-extra loaded
+2022-12-28T06:16:39.062Z - success: ui-kit-preview loaded
+2022-12-28T06:16:39.410Z - success: alipay-minigame loaded
+2022-12-28T06:16:39.414Z - success: assets loaded
+2022-12-28T06:16:39.416Z - success: baidugame-opendata loaded
+2022-12-28T06:16:39.417Z - success: baidugame loaded
+2022-12-28T06:16:39.418Z - success: builder loaded
+2022-12-28T06:16:39.420Z - success: bytedance-opendata loaded
+2022-12-28T06:16:39.421Z - success: bytedance loaded
+2022-12-28T06:16:39.422Z - success: channel-upload-tools loaded
+2022-12-28T06:16:39.486Z - success: cloud-function loaded
+2022-12-28T06:16:39.580Z - success: cocos-services loaded
+2022-12-28T06:16:39.581Z - success: console loaded
+2022-12-28T06:16:39.583Z - success: curve-editor loaded
+2022-12-28T06:16:39.588Z - success: fb-instant-games loaded
+2022-12-28T06:16:39.589Z - success: game-window loaded
+2022-12-28T06:16:39.590Z - success: google-instant-games loaded
+2022-12-28T06:16:39.592Z - success: hierarchy loaded
+2022-12-28T06:16:39.593Z - success: huawei-agc loaded
+2022-12-28T06:16:39.595Z - success: huawei-runtime loaded
+2022-12-28T06:16:39.596Z - success: inspector loaded
+2022-12-28T06:16:39.604Z - success: cpk-publish loaded
+2022-12-28T06:16:39.604Z - success: keystore loaded
+2022-12-28T06:16:39.613Z - success: link-sure-runtime loaded
+2022-12-28T06:16:39.619Z - success: node-library loaded
+2022-12-28T06:16:39.619Z - success: open-recent-items loaded
+2022-12-28T06:16:39.621Z - success: oppo-runtime loaded
+2022-12-28T06:16:39.621Z - success: package-asset loaded
+2022-12-28T06:16:39.622Z - success: preferences loaded
+2022-12-28T06:16:39.624Z - success: project-importer loaded
+2022-12-28T06:16:39.625Z - success: project-settings loaded
+2022-12-28T06:16:39.632Z - success: qtt-runtime loaded
+2022-12-28T06:16:39.634Z - success: scene loaded
+2022-12-28T06:16:39.634Z - success: simulator-debugger loaded
+2022-12-28T06:16:39.635Z - success: sprite-editor loaded
+2022-12-28T06:16:39.669Z - success: store loaded
+2022-12-28T06:16:39.671Z - success: taobao-creativeapp loaded
+2022-12-28T06:16:39.673Z - success: timeline loaded
+2022-12-28T06:16:39.676Z - success: vivo-runtime loaded
+2022-12-28T06:16:39.677Z - success: wechatgame-opendata loaded
+2022-12-28T06:16:39.679Z - success: wechatgame loaded
+2022-12-28T06:16:39.681Z - success: xiaomi-runtime loaded
+2022-12-28T06:16:39.711Z - success: im-plugin loaded
+2022-12-28T06:16:39.711Z - success: preview server running at http://localhost:7456
+2022-12-28T06:16:40.114Z - normal: Initializing Cocos2d
+2022-12-28T06:16:40.250Z - normal: Initializing engine extends
+2022-12-28T06:16:40.643Z - normal: Loading packages
+2022-12-28T06:16:40.645Z - normal: Run Application
+2022-12-28T06:16:42.236Z - info: Cocos Service load base data!
+2022-12-28T06:16:43.859Z - success: cloud-function unloaded
+2022-12-28T06:23:15.188Z - success: TypeScript Configuration file has been copied to /Users/admin/ITCode/StarGame/tsconfig.json
+2022-12-28T06:23:22.864Z - success: Chrome debug setting has been updated to .vscode/launch.json, please install Debugger for Chrome VS Code extension to debug your project.
+2022-12-28T06:23:24.834Z - success: API data generated and copied to /Users/admin/ITCode/StarGame/creator.d.ts
+2022-12-28T06:23:27.127Z - success: VS Code extension installed to /Users/admin/.vscode/extensions
+2022-12-28T06:30:44.973Z - warn: [db-task][sync-changes] Backup unused meta file: db://assets/scripts/Game - 001.ts.meta
+2022-12-28T06:30:44.991Z - warn: [db-task][sync-changes] Backup unused meta file: db://assets/scripts/Game.js.meta
+2022-12-28T07:19:44.238Z - failed: [db-task][sync-changes] Failed to import asset /Users/admin/ITCode/StarGame/assets/scripts/Star.js, message: Compile error: SyntaxError: /Users/admin/ITCode/StarGame/assets/scripts/Star.js: Unexpected token (52:29)
+
+  50 |     getPlayerDistance() {
+  51 |         // 根据 Player 节点位置判断距离
+> 52 |         var playerPos = Game.;
+     |                              ^
+  53 |         // 根据两点位置计算两点之间距离
+  54 |         var dist = this.node.position.sub(playerPos).mag();
+  55 |         return dist;
+    at Parser._raise (/Applications/CocosCreator/Creator/2.4.9/CocosCreator.app/Contents/Resources/app.asar/node_modules/@babel/parser/lib/index.js:569:17)
+    at Parser.raiseWithData (/Applications/CocosCreator/Creator/2.4.9/CocosCreator.app/Contents/Resources/app.asar/node_modules/@babel/parser/lib/index.js:562:17)
+    at Parser.raise (/Applications/CocosCreator/Creator/2.4.9/CocosCreator.app/Contents/Resources/app.asar/node_modules/@babel/parser/lib/index.js:523:17)
+    at Parser.unexpected (/Applications/CocosCreator/Creator/2.4.9/CocosCreator.app/Contents/Resources/app.asar/node_modules/@babel/parser/lib/index.js:3601:16)
+    at Parser.parseIdentifierName (/Applications/CocosCreator/Creator/2.4.9/CocosCreator.app/Contents/Resources/app.asar/node_modules/@babel/parser/lib/index.js:12991:18)
+    at Parser.parseIdentifier (/Applications/CocosCreator/Creator/2.4.9/CocosCreator.app/Contents/Resources/app.asar/node_modules/@babel/parser/lib/index.js:12971:23)
+    at Parser.parseMember (/Applications/CocosCreator/Creator/2.4.9/CocosCreator.app/Contents/Resources/app.asar/node_modules/@babel/parser/lib/index.js:11731:28)
+    at Parser.parseSubscript (/Applications/CocosCreator/Creator/2.4.9/CocosCreator.app/Contents/Resources/app.asar/node_modules/@babel/parser/lib/index.js:11707:21)
+    at Parser.parseSubscripts (/Applications/CocosCreator/Creator/2.4.9/CocosCreator.app/Contents/Resources/app.asar/node_modules/@babel/parser/lib/index.js:11671:19)
+    at Parser.parseExprSubscripts (/Applications/CocosCreator/Creator/2.4.9/CocosCreator.app/Contents/Resources/app.asar/node_modules/@babel/parser/lib/index.js:11660:17)
+2022-12-28T07:19:44.718Z - warn: Script attached to "star" is missing or invalid. Detailed information:
+Node path: "star"
+Script UUID: "c55f8eaf-ed84-4b0f-887c-e3d3190b0cc2"
+Class ID: "c55f86v7YRLD4h849MZCwzC"
+
+2022-12-28T07:19:49.227Z - warn: Script attached to "star" is missing or invalid. Detailed information:
+Node path: "star"
+Script UUID: "c55f8eaf-ed84-4b0f-887c-e3d3190b0cc2"
+Class ID: "c55f86v7YRLD4h849MZCwzC"
+
+2022-12-28T07:19:49.258Z - warn: Script attached to "star" is missing or invalid. Detailed information:
+Node path: "star"
+Script UUID: "c55f8eaf-ed84-4b0f-887c-e3d3190b0cc2"
+Class ID: "c55f86v7YRLD4h849MZCwzC"
+
+2022-12-28T07:22:04.147Z - warn: [db-task][sync-changes] Backup unused meta file: db://assets/scripts/Player.js.meta
+2022-12-28T07:22:04.161Z - warn: [db-task][sync-changes] Backup unused meta file: db://assets/scripts/Star.js.meta
+2022-12-28T07:22:33.715Z - warn: Script attached to "player" is missing or invalid. Detailed information:
+Node path: "Canvas/player"
+Script UUID: "426470c1-ec87-40c4-8c63-b581f4ef5443"
+Class ID: "42647DB7IdAxIxjtYH071RD"
+

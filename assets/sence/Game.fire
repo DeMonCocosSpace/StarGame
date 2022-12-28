@@ -432,7 +432,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Player",
+    "_name": "player",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -528,7 +528,7 @@
     "_id": "4fiu/8NzVEH6puraUTbwiS"
   },
   {
-    "__type__": "42647DB7IdAxIxjtYH071RD",
+    "__type__": "2b232KK+n1A35Ik/d/pCgX2",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -542,7 +542,7 @@
     "jumpAudio": {
       "__uuid__": "dc194f1a-c8a5-46ca-aaf9-f03b70974af5"
     },
-    "_id": "abvA+sWaVBDqtbq/RAd1/G"
+    "_id": "44lOuRhOxDOrbbG13WeR8i"
   },
   {
     "__type__": "cc.Node",
@@ -686,31 +686,30 @@
     "_id": "c6kzj6y0lDA6yATNdxHuUK"
   },
   {
-    "__type__": "a6886ZRpKdMaa5bILpq8zFx",
+    "__type__": "622b7/OK4dOzZ22agFG7Kw5",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 2
     },
     "_enabled": true,
-    "starPrefab": {
-      "__uuid__": "ca96836d-4ba4-494c-806f-455b8379985f"
-    },
-    "maxStarDuration": 3,
-    "minStarDuration": 5,
     "ground": {
       "__id__": 7
+    },
+    "star": {
+      "__uuid__": "ca96836d-4ba4-494c-806f-455b8379985f"
     },
     "player": {
       "__id__": 9
     },
-    "scoreDisplay": {
+    "scoreText": {
       "__id__": 13
     },
-    "score": 0,
-    "scoreAuido": {
+    "scoreAudio": {
       "__uuid__": "55d110b9-bab6-4d9d-9416-03e46904fa35"
     },
-    "_id": "e2QriyYQNDv73jHI0KZLDZ"
+    "minStarDuration": 2,
+    "maxStarDuration": 5,
+    "_id": "5fRFPDJ5pIQbXaWOhBA0SN"
   }
 ]
