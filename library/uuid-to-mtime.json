@@ -555,8 +555,8 @@
     "relativePath": "font/mikado_outline_shadow.png"
   },
   "da0a122b-0721-4bb9-89b0-20ebaef5617a": {
-    "asset": 1672217106743,
-    "meta": 1672217106745,
+    "asset": 1672220150497,
+    "meta": 1672220150501,
     "relativePath": "sence/Game.fire"
   },
   "dba82ebd-9131-4eb7-929b-2774685c079e": {
@@ -595,8 +595,8 @@
     "relativePath": "scripts/Star.ts"
   },
   "622b7fce-2b87-4ecd-9db6-6a0146ecac39": {
-    "asset": 1672219746747,
-    "meta": 1672219755551,
+    "asset": 1672220209054,
+    "meta": 1672220243755,
     "relativePath": "scripts/Game.ts"
   }
 }

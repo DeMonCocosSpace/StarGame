@@ -11,6 +11,9 @@ const { ccclass, property } = cc._decorator;
 export default class Game extends cc.Component {
 
     @property(cc.Node)
+    btnPlay: cc.Node = null; //开始按钮节点
+
+    @property(cc.Node)
     ground: cc.Node = null; //地面节点，用于确定星星生成的高度
 
     @property(cc.Prefab)
@@ -40,7 +43,9 @@ export default class Game extends cc.Component {
 
     onLoad() {
         this.groundY = this.ground.y + this.ground.height / 2;
-        this.spawnNewStar();
+
+        this.scoreText.node.active = false;
+        this.player.active = false;
     }
 
     update(dt) {
@@ -53,6 +58,14 @@ export default class Game extends cc.Component {
         this.timer += dt;
     }
 
+    //开始游戏逻辑
+    startGame() {
+        this.spawnNewStar();
+
+        this.btnPlay.active = false;
+        this.scoreText.node.active = true;
+        this.player.active = true;
+    }
     //得分逻辑
     gainScore() {
         this.score += 1;
