@@ -73,7 +73,7 @@ export default class Game extends cc.Component {
 
     //开始游戏逻辑
     startGame() {
-        this.isPlaying = true;
+        this.isPlaying = false;
 
         this.spawnNewStar();
 
@@ -125,13 +125,12 @@ export default class Game extends cc.Component {
         }
         //添加星星
         this.node.addChild(newStar);
+        //赋值当前星星节点
+        this.currentStar = newStar;
         //根据随机位置生成星星
         newStar.setPosition(this.getNewStarPos());
         //传Game给Star调用
         newStar.getComponent(Star).init(this);
-
-        //复制当前星星节点
-        this.currentStar = newStar;
 
         //重置计时器，根据消失时间范围随机取一个值
         this.starDuration = this.minStarDuration + Math.random() * (this.maxStarDuration - this.minStarDuration);
@@ -140,7 +139,8 @@ export default class Game extends cc.Component {
 
     //获取星星随机生成的位置
     getNewStarPos() {
-        let randx = (Math.random() - 0.5) * 2 * this.node.width / 2;
+        //减掉星星宽度，防止星星一半显示在屏幕外
+        let randx = (Math.random() - 0.5) * 2 * (this.node.width / 2 - this.currentStar.width / 2);
         let jumpHeight = this.player.getComponent('Player').jumpHeight;
         let randy = this.groundY + Math.random() * jumpHeight + 50;
         cc.log(this.node.width + ',(' + randx + ',' + randy + ')');

@@ -84,11 +84,6 @@
     "meta": 1672221906047,
     "relativePath": "sence"
   },
-  "622b7fce-2b87-4ecd-9db6-6a0146ecac39": {
-    "asset": 1672282683651,
-    "meta": 1672282721321,
-    "relativePath": "scripts/Game.ts"
-  },
   "f17d722b-6acf-4d78-a2eb-76ff3c7bbbd4": {
     "asset": 1672283441363,
     "meta": 1672283452938,
@@ -598,5 +593,10 @@
     "asset": 1649745263000,
     "meta": 1672283807499,
     "relativePath": "model/primitives.fbx"
+  },
+  "622b7fce-2b87-4ecd-9db6-6a0146ecac39": {
+    "asset": 1672284307646,
+    "meta": 1672284314144,
+    "relativePath": "scripts/Game.ts"
   }
 }
