@@ -55,8 +55,8 @@
     "relativePath": "font/mikado_outline_shadow.png"
   },
   "da0a122b-0721-4bb9-89b0-20ebaef5617a": {
-    "asset": 1672285099480,
-    "meta": 1672285099482,
+    "asset": 1672285876161,
+    "meta": 1672285876164,
     "relativePath": "sence/Game.fire"
   },
   "dba82ebd-9131-4eb7-929b-2774685c079e": {
@@ -83,11 +83,6 @@
     "asset": 1672212149013,
     "meta": 1672221906047,
     "relativePath": "sence"
-  },
-  "622b7fce-2b87-4ecd-9db6-6a0146ecac39": {
-    "asset": 1672284479506,
-    "meta": 1672284482042,
-    "relativePath": "scripts/Game.ts"
   },
   "f17d722b-6acf-4d78-a2eb-76ff3c7bbbd4": {
     "asset": 1672284700051,
@@ -595,8 +590,13 @@
     "relativePath": "model/primitives.fbx"
   },
   "2b23228a-fa7d-40df-9224-fddfe90a05f6": {
-    "asset": 1672285212592,
-    "meta": 1672285215603,
+    "asset": 1672293067286,
+    "meta": 1672293070172,
     "relativePath": "scripts/Player.ts"
+  },
+  "622b7fce-2b87-4ecd-9db6-6a0146ecac39": {
+    "asset": 1672293215086,
+    "meta": 1672293218771,
+    "relativePath": "scripts/Game.ts"
   }
 }

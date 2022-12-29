@@ -28,9 +28,13 @@ export default class Player extends cc.Component {
     private accRight = false; //向右加速
     private xSpeed = 0; //主角横向加速
 
+    private jump = null; //缓存跳跃缓动
     onLoad() {
         this.enabled = false;
         this.setInputControl();
+
+        //跳跃
+        this.jumpAction();
     }
 
     onDestroy() {
@@ -124,8 +128,8 @@ export default class Player extends cc.Component {
         this.node.setPosition(cc.v2(0, y));
         //重置角色速度
         this.xSpeed = 0;
-        //跳跃
-        this.jumpAction();
+        //开始跳跃
+        cc.tween(this.node).then(this.jump).start();
     }
 
     //游戏结束停止跳动
@@ -145,7 +149,7 @@ export default class Player extends cc.Component {
         var squash = cc.tween().to(this.squashDuration, { scaleX: 1, scaleY: 0.6 });
         var stretch = cc.tween().to(this.squashDuration, { scaleX: 1, scaleY: 1.2 });
         var scaleBack = cc.tween().to(this.squashDuration, { scaleX: 1, scaleY: 1 });
-        //创建一个缓动=
+        //创建一个缓动
         let tween = cc.tween()
             //按 jumpUp、jumpDown 的顺序执行动作
             .sequence(squash, stretch, jumpUp, scaleBack, jumpDown)
@@ -154,7 +158,7 @@ export default class Player extends cc.Component {
                 this.playJumpAudio();
             }, this)
         //重复执行
-        cc.tween(this.node).repeatForever(tween).start();
+        this.jump = cc.tween().repeatForever(tween);
     }
 
     playJumpAudio() {

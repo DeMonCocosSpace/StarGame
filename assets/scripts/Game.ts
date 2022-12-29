@@ -28,6 +28,9 @@ export default class Game extends cc.Component {
     @property(cc.Label)
     scoreText: cc.Label = null; //分数节点
 
+    @property(cc.Label)
+    lTimer: cc.Label = null; //星星倒计时节点
+
     @property(cc.AudioClip)
     scoreAudio: cc.AudioClip = null; //得分音效
 
@@ -62,6 +65,8 @@ export default class Game extends cc.Component {
 
     update(dt) {
         if (!this.isPlaying) return;
+
+        this.lTimer.string = (this.starDuration - this.timer).toFixed(3) + '';
         // 每帧更新计时器，超过限度还没有生成新的星星
         // 就会调用游戏失败逻辑
         if (this.timer > this.starDuration) {
@@ -76,7 +81,8 @@ export default class Game extends cc.Component {
         this.isPlaying = true;
 
         this.spawnNewStar();
-
+        //显示倒计时
+        this.lTimer.node.active = true;
         this.lGameOver.active = false;
         this.btnPlay.active = false;
         //重置得分
@@ -96,6 +102,8 @@ export default class Game extends cc.Component {
 
     //游戏结束逻辑
     gameOver() {
+        //隐藏倒计时
+        this.lTimer.node.active = false;
         this.isPlaying = false;
         this.lGameOver.active = true;
         //停止角色
