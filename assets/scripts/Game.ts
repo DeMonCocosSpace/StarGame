@@ -73,7 +73,7 @@ export default class Game extends cc.Component {
 
     //开始游戏逻辑
     startGame() {
-        this.isPlaying = false;
+        this.isPlaying = true;
 
         this.spawnNewStar();
 

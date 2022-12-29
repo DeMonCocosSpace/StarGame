@@ -31,7 +31,7 @@ export default class Star extends cc.Component {
     init(game: Game) {
         this.enabled = true;
         this.game = game;
-        //重制星星的透明度
+        //重置星星的透明度
         this.node.opacity = 255;
     }
 
