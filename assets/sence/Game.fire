@@ -1114,8 +1114,8 @@
     "lGameOver": {
       "__id__": 18
     },
-    "minStarDuration": 2,
-    "maxStarDuration": 6,
+    "minStarDuration": 3,
+    "maxStarDuration": 5,
     "_id": "5fRFPDJ5pIQbXaWOhBA0SN"
   }
 ]
