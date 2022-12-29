@@ -11,7 +11,6 @@ const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class Star extends cc.Component {
-
     @property(cc.Integer)
     pickRadius = 0;
 
@@ -19,10 +18,9 @@ export default class Star extends cc.Component {
     private game: Game = null;
 
     reuse(game) {
-        console.log('reuse');
+        console.log("reuse");
         this.init(game);
     }
-
 
     onLoad() {
         this.enabled = false;
@@ -62,6 +60,4 @@ export default class Star extends cc.Component {
         const minOpacity = 50;
         this.node.opacity = minOpacity + Math.floor(opacityRatio * (255 - minOpacity));
     }
-
-
 }

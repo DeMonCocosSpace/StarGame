@@ -12,7 +12,6 @@ const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class Game extends cc.Component {
-
     @property(cc.Node)
     btnPlay: cc.Node = null; //开始按钮节点
 
@@ -38,20 +37,18 @@ export default class Game extends cc.Component {
     lGameOver: cc.Node = null; //GameOver节点
 
     @property(cc.Integer)
-    minStarDuration = 0;  //星星生成随机最小时间
+    minStarDuration = 0; //星星生成随机最小时间
 
     @property(cc.Integer)
     maxStarDuration = 0; //星星生成的随机最大时间
 
-
     timer = 0; //计时器
     starDuration; //星星存在时间
 
-    private groundY = 0;//地面高度
+    private groundY = 0; //地面高度
     private score = 0; //得分
 
     private isPlaying = false; //当前是否在玩
-
 
     private currentStar: cc.Node = null; //当前星星节点，用于游戏结束销毁
     private starPool: cc.NodePool = null; //星星对象池
@@ -59,14 +56,13 @@ export default class Game extends cc.Component {
     onLoad() {
         this.groundY = this.ground.y + this.ground.height / 2;
 
-        this.starPool = new cc.NodePool('Star'); //星星
-
+        this.starPool = new cc.NodePool("Star"); //星星
     }
 
     update(dt) {
         if (!this.isPlaying) return;
 
-        this.lTimer.string = (this.starDuration - this.timer).toFixed(3) + '';
+        this.lTimer.string = (this.starDuration - this.timer).toFixed(3) + "";
         // 每帧更新计时器，超过限度还没有生成新的星星
         // 就会调用游戏失败逻辑
         if (this.timer > this.starDuration) {
@@ -87,15 +83,14 @@ export default class Game extends cc.Component {
         this.btnPlay.active = false;
         //重置得分
         this.score = 0;
-        this.scoreText.string = 'Score: 0';
+        this.scoreText.string = "Score: 0";
         //重置角色状态
-        this.player.startMove(this.groundY)
-
+        this.player.startMove(this.groundY);
     }
     //得分逻辑
     gainScore() {
         this.score += 1;
-        this.scoreText.string = 'Score: ' + this.score;
+        this.scoreText.string = "Score: " + this.score;
         //播放得分音效
         cc.audioEngine.playEffect(this.scoreAudio, false);
     }
@@ -149,10 +144,9 @@ export default class Game extends cc.Component {
     getNewStarPos() {
         //减掉星星宽度，防止星星一半显示在屏幕外
         let randx = (Math.random() - 0.5) * 2 * (this.node.width / 2 - this.currentStar.width / 2);
-        let jumpHeight = this.player.getComponent('Player').jumpHeight;
+        let jumpHeight = this.player.getComponent("Player").jumpHeight;
         let randy = this.groundY + Math.random() * jumpHeight + 50;
-        cc.log(this.node.width + ',(' + randx + ',' + randy + ')');
+        cc.log(this.node.width + ",(" + randx + "," + randy + ")");
         return cc.v2(randx, randy);
     }
-
 }

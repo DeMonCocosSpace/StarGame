@@ -9,7 +9,6 @@ const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class Player extends cc.Component {
-
     @property(cc.Integer)
     jumpHeight = 0; // 最大移动速度
     @property(cc.Integer)
@@ -22,7 +21,6 @@ export default class Player extends cc.Component {
     accel = 0; // 加速度
     @property(cc.AudioClip)
     jumpAudio: cc.AudioClip = null;
-
 
     private accLeft = false; //向左加速
     private accRight = false; //向右加速
@@ -109,15 +107,16 @@ export default class Player extends cc.Component {
         }
         // 限制主角的速度不能超过最大值
         if (Math.abs(this.xSpeed) > this.maxMoveSpeed) {
-            this.xSpeed = this.maxMoveSpeed * this.xSpeed / Math.abs(this.xSpeed);
+            this.xSpeed = (this.maxMoveSpeed * this.xSpeed) / Math.abs(this.xSpeed);
         }
 
         //设置主角位置
         this.node.x += this.xSpeed * dt;
         //限制主角不能超过屏幕外
-        const parentWidth = this.node.parent.width / 2
+        const parentWidth = this.node.parent.width / 2;
         if (Math.abs(this.node.x) + this.node.width / 2 >= parentWidth) {
-            this.node.x = (parentWidth - this.node.width / 2) * this.node.x / Math.abs(this.node.x);
+            this.node.x =
+                ((parentWidth - this.node.width / 2) * this.node.x) / Math.abs(this.node.x);
         }
     }
 
@@ -140,23 +139,26 @@ export default class Player extends cc.Component {
     //跳跃
     jumpAction() {
         //上升
-        let jumpUp = cc.tween()
-            .by(this.jumpDuration, { y: this.jumpHeight }, { easing: 'sineOut' });
+        let jumpUp = cc
+            .tween()
+            .by(this.jumpDuration, { y: this.jumpHeight }, { easing: "sineOut" });
         //下落
-        let jumpDown = cc.tween()
-            .by(this.jumpDuration, { y: -this.jumpHeight }, { easing: 'sineIn' });
+        let jumpDown = cc
+            .tween()
+            .by(this.jumpDuration, { y: -this.jumpHeight }, { easing: "sineIn" });
         // 形变
         var squash = cc.tween().to(this.squashDuration, { scaleX: 1, scaleY: 0.6 });
         var stretch = cc.tween().to(this.squashDuration, { scaleX: 1, scaleY: 1.2 });
         var scaleBack = cc.tween().to(this.squashDuration, { scaleX: 1, scaleY: 1 });
         //创建一个缓动
-        let tween = cc.tween()
+        let tween = cc
+            .tween()
             //按 jumpUp、jumpDown 的顺序执行动作
             .sequence(squash, stretch, jumpUp, scaleBack, jumpDown)
             //回调
             .call(() => {
                 this.playJumpAudio();
-            }, this)
+            }, this);
         //重复执行
         this.jump = cc.tween().repeatForever(tween);
     }
