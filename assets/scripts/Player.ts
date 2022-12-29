@@ -27,11 +27,20 @@ export default class Player extends cc.Component {
     private xSpeed = 0; //主角横向加速
 
     onLoad() {
-        this.jumpAction();
-
+        this.enabled = false;
         this.setInputControl();
     }
 
+    onDestroy() {
+        //销毁键盘监听
+        cc.systemEvent.off(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+        cc.systemEvent.off(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
+        //销毁屏幕监听
+        this.node.parent.off(cc.Node.EventType.TOUCH_START, this.onTouchBegan, this);
+        this.node.parent.off(cc.Node.EventType.TOUCH_END, this.onTouchEnded, this);
+    }
+
+    //键盘&屏幕监听
     setInputControl() {
         //add keyboard input listener to jump, turnLeft and turnRight
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
@@ -43,9 +52,11 @@ export default class Player extends cc.Component {
 
     onKeyDown(event: cc.Event.EventKeyboard) {
         switch (event.keyCode) {
+            case cc.macro.KEY.d:
             case cc.macro.KEY.right:
                 this.accRight = true;
                 break;
+            case cc.macro.KEY.a:
             case cc.macro.KEY.left:
                 this.accLeft = true;
                 break;
@@ -54,9 +65,11 @@ export default class Player extends cc.Component {
 
     onKeyUp(event: cc.Event.EventKeyboard) {
         switch (event.keyCode) {
+            case cc.macro.KEY.d:
             case cc.macro.KEY.right:
                 this.accRight = false;
                 break;
+            case cc.macro.KEY.a:
             case cc.macro.KEY.left:
                 this.accLeft = false;
                 break;
@@ -102,12 +115,21 @@ export default class Player extends cc.Component {
         }
     }
 
-    onDestroy() {
-        cc.systemEvent.off(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
-        cc.systemEvent.off(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
+    //游戏开始，角色开始移动
+    startMove(y) {
+        this.enabled = true;
+        //重置角色位置回地面
+        this.node.setPosition(cc.v2(0, y));
+        //重置角色速度
+        this.xSpeed = 0;
+        //跳跃
+        this.jumpAction();
     }
 
-
+    //游戏结束停止跳动
+    stopMove() {
+        this.node.stopAllActions();
+    }
 
     //跳跃
     jumpAction() {

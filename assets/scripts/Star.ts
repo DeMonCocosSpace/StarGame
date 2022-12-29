@@ -18,17 +18,26 @@ export default class Star extends cc.Component {
     //当前场景的脚本
     private game: Game = null;
 
-    onLoad() {
+    reuse(game) {
+        console.log('reuse');
+        this.init(game);
+    }
 
+
+    onLoad() {
+        this.enabled = false;
     }
 
     init(game: Game) {
+        this.enabled = true;
         this.game = game;
+        //重制星星的透明度
+        this.node.opacity = 255;
     }
 
     //获取主角与星星间的距离
     getDistance() {
-        let playerPos = this.game.player.position;
+        let playerPos = this.game.player.node.position;
         //console.log('(' + playerPos.x + ',' + playerPos.y + '+)');
         let distance = this.node.position.sub(playerPos).mag();
         return distance;
@@ -36,11 +45,11 @@ export default class Star extends cc.Component {
     //主角摘到星星
     onPicked() {
         // 当星星被收集时，调用 Game 脚本中的接口，生成一个新的星星
-        this.game.spawnNewStar();
+        this.game.desPawnStar(this.node);
         // 调用 Game 脚本的得分方法
         this.game.gainScore();
         // 然后销毁当前星星节点
-        this.node.destroy();
+        //this.node.destroy();
     }
     update(dt) {
         if (this.getDistance() < this.pickRadius) {
