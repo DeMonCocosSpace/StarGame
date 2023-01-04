@@ -1,0 +1,138 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "ScoreShow",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.8,
+  "sample": 25,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "pop": {
+        "comps": {
+          "cc.Sprite": {
+            "spriteFrame": [
+              {
+                "frame": 0,
+                "value": {
+                  "__uuid__": "c6af4ad9-e654-4364-b4c0-17ed5e982422"
+                }
+              },
+              {
+                "frame": 0.08,
+                "value": {
+                  "__uuid__": "6b1e4142-cd4c-4931-b2a8-a9a3895d0069"
+                }
+              },
+              {
+                "frame": 0.16,
+                "value": {
+                  "__uuid__": "6dadbd12-c077-4ec3-9ef4-4b271ea9d045"
+                }
+              },
+              {
+                "frame": 0.24,
+                "value": {
+                  "__uuid__": "19857cdf-9047-45cb-9fee-ce7d7dc249c6"
+                }
+              },
+              {
+                "frame": 0.32,
+                "value": {
+                  "__uuid__": "4235c996-52bf-4eee-b0cf-9b7bb48dfb34"
+                }
+              },
+              {
+                "frame": 0.4,
+                "value": {
+                  "__uuid__": "694a51b2-1ce7-41f6-8b49-5695ab060655"
+                }
+              }
+            ]
+          }
+        },
+        "props": {
+          "opacity": [
+            {
+              "frame": 0.4,
+              "value": 255
+            },
+            {
+              "frame": 0.6,
+              "value": 0
+            }
+          ],
+          "scale": [
+            {
+              "frame": 0,
+              "value": {
+                "__type__": "cc.Vec3",
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            },
+            {
+              "frame": 0.2,
+              "value": {
+                "__type__": "cc.Vec3",
+                "x": 1.5,
+                "y": 1.5,
+                "z": 1
+              }
+            },
+            {
+              "frame": 0.4,
+              "value": {
+                "__type__": "cc.Vec3",
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            }
+          ]
+        }
+      },
+      "score": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "frame": 0.6,
+              "value": [
+                0,
+                100,
+                0
+              ]
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0.6,
+              "value": 255
+            },
+            {
+              "frame": 0.8,
+              "value": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": [
+    {
+      "frame": 0.8,
+      "func": "playEnd",
+      "params": []
+    }
+  ]
+}

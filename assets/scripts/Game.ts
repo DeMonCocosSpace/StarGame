@@ -6,6 +6,7 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import Player from "./Player";
+import Score from "./Score";
 import Star from "./Star";
 
 const { ccclass, property } = cc._decorator;
@@ -21,6 +22,9 @@ export default class Game extends cc.Component {
     @property(cc.Prefab)
     star: cc.Prefab = null; //星星生成的预制体
 
+    @property(cc.Prefab)
+    scoreNode: cc.Prefab = null;
+
     @property(Player)
     player: Player = null; //玩家主角节点
 
@@ -29,9 +33,6 @@ export default class Game extends cc.Component {
 
     @property(cc.Label)
     lTimer: cc.Label = null; //星星倒计时节点
-
-    @property(cc.AudioClip)
-    scoreAudio: cc.AudioClip = null; //得分音效
 
     @property(cc.Node)
     lGameOver: cc.Node = null; //GameOver节点
@@ -42,6 +43,19 @@ export default class Game extends cc.Component {
     @property(cc.Integer)
     maxStarDuration = 0; //星星生成的随机最大时间
 
+    @property(cc.Label)
+    playTips: cc.Label = null;
+
+    @property({
+        multiline: true,
+    })
+    touchHint = "";
+
+    @property({
+        multiline: true,
+    })
+    keyboardHint = "";
+
     timer = 0; //计时器
     starDuration; //星星存在时间
 
@@ -51,12 +65,19 @@ export default class Game extends cc.Component {
     private isPlaying = false; //当前是否在玩
 
     private currentStar: cc.Node = null; //当前星星节点，用于游戏结束销毁
+
     private starPool: cc.NodePool = null; //星星对象池
+    private scorePool: cc.NodePool = null; //得分对象池
 
     onLoad() {
         this.groundY = this.ground.y + this.ground.height / 2;
 
         this.starPool = new cc.NodePool("Star"); //星星
+        this.scorePool = new cc.NodePool("Score"); //得分
+
+        cc.log("isMobile=" + cc.sys.isMobile + ",platform=" + cc.sys.platform);
+        var hintText = cc.sys.isMobile ? this.touchHint : this.keyboardHint;
+        this.playTips.string = hintText;
     }
 
     update(dt) {
@@ -88,11 +109,31 @@ export default class Game extends cc.Component {
         this.player.startMove(this.groundY);
     }
     //得分逻辑
-    gainScore() {
+    gainScore(position: cc.Vec3) {
         this.score += 1;
         this.scoreText.string = "Score: " + this.score;
-        //播放得分音效
-        cc.audioEngine.playEffect(this.scoreAudio, false);
+        //播放特效
+        this.spawnScore(position);
+    }
+
+    //生成得分特效
+    spawnScore(position) {
+        let fx: cc.Node = null;
+        if (this.scorePool.size() > 0) {
+            fx = this.scorePool.get();
+        } else {
+            fx = cc.instantiate(this.scoreNode);
+        }
+        this.node.addChild(fx);
+        fx.setPosition(position);
+        const score = fx.getComponent(Score);
+        score.init(this);
+        score.play();
+    }
+
+    //回收得分特效
+    despawnScore(score) {
+        this.scorePool.put(score);
     }
 
     //游戏结束逻辑

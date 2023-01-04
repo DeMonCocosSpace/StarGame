@@ -42,10 +42,10 @@ export default class Star extends cc.Component {
     }
     //主角摘到星星
     onPicked() {
+        // 调用 Game 脚本的得分方法
+        this.game.gainScore(this.node.position);
         // 当星星被收集时，调用 Game 脚本中的接口，生成一个新的星星
         this.game.desPawnStar(this.node);
-        // 调用 Game 脚本的得分方法
-        this.game.gainScore();
         // 然后销毁当前星星节点
         //this.node.destroy();
     }
