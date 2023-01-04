@@ -55,8 +55,8 @@
     "relativePath": "font/mikado_outline_shadow.png"
   },
   "da0a122b-0721-4bb9-89b0-20ebaef5617a": {
-    "asset": 1672827473332,
-    "meta": 1672827473336,
+    "asset": 1672827669299,
+    "meta": 1672827669303,
     "relativePath": "sence/Game.fire"
   },
   "dba82ebd-9131-4eb7-929b-2774685c079e": {
@@ -630,8 +630,8 @@
     "relativePath": "model/primitives.fbx"
   },
   "622b7fce-2b87-4ecd-9db6-6a0146ecac39": {
-    "asset": 1672827583969,
-    "meta": 1672827586724,
+    "asset": 1672827616577,
+    "meta": 1672827658874,
     "relativePath": "scripts/Game.ts"
   }
 }

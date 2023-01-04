@@ -1167,8 +1167,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 252,
-      "height": 90.4
+      "width": 0,
+      "height": 50.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1320,7 +1320,7 @@
     "playTips": {
       "__id__": 25
     },
-    "touchHint": "点击左半屏幕：向左加速 \n点击右半屏幕：向右加速",
+    "touchHint": "点击左半屏幕：向左加速\n点击右半屏幕：向右加速",
     "keyboardHint": "A：向左加速\nD：向右加速",
     "_id": "5fRFPDJ5pIQbXaWOhBA0SN"
   }
