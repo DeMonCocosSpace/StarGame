@@ -8,18 +8,18 @@
       "x": 0,
       "y": 25,
       "width": 1920,
-      "height": 998,
+      "height": 1055,
       "layout": {
         "type": "dock-h",
         "children": [
           {
             "width": 304,
-            "height": 908.5,
+            "height": 968,
             "type": "dock-v",
             "children": [
               {
                 "width": 304,
-                "height": 298.828125,
+                "height": 315.65625,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -28,7 +28,7 @@
               },
               {
                 "width": 304,
-                "height": 606.65625,
+                "height": 649.34375,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -38,8 +38,8 @@
             ]
           },
           {
-            "width": 304,
-            "height": 908.5,
+            "width": 443,
+            "height": 968,
             "type": "panel",
             "active": 0,
             "children": [
@@ -47,13 +47,13 @@
             ]
           },
           {
-            "width": 1305.984375,
-            "height": 908.5,
+            "width": 1166.984375,
+            "height": 968,
             "type": "dock-v",
             "children": [
               {
-                "width": 1305.984375,
-                "height": 464.75,
+                "width": 1166.984375,
+                "height": 490.515625,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -61,10 +61,10 @@
                 ]
               },
               {
-                "width": 1305.984375,
-                "height": 440.75,
+                "width": 1166.984375,
+                "height": 474.46875,
                 "type": "panel",
-                "active": 1,
+                "active": 0,
                 "children": [
                   "console",
                   "timeline",
@@ -84,7 +84,8 @@
         "timeline",
         "game-window"
       ]
-    }
+    },
+    " common-asset-worker-worker": {}
   },
   "panels": {
     "console": {

@@ -78,6 +78,8 @@ export default class Game extends cc.Component {
         cc.log("isMobile=" + cc.sys.isMobile + ",platform=" + cc.sys.platform);
         var hintText = cc.sys.isMobile ? this.touchHint : this.keyboardHint;
         this.playTips.string = hintText;
+
+        cc.director.getCollisionManager().enabled = true;
     }
 
     update(dt) {
@@ -177,7 +179,8 @@ export default class Game extends cc.Component {
         newStar.getComponent(Star).init(this);
 
         //重置计时器，根据消失时间范围随机取一个值
-        this.starDuration = this.minStarDuration + Math.random() * (this.maxStarDuration - this.minStarDuration);
+        this.starDuration =
+            this.minStarDuration + Math.random() * (this.maxStarDuration - this.minStarDuration);
         this.timer = 0;
     }
 

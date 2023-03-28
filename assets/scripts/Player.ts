@@ -120,6 +120,10 @@ export default class Player extends cc.Component {
         }
     }
 
+    onCollisionEnter(other: Node, self: Node) {
+        CC_DEBUG && cc.log("Player onCollisionEnter");
+    }
+
     //游戏开始，角色开始移动
     startMove(y) {
         this.enabled = true;

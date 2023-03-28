@@ -33,6 +33,11 @@ export default class Star extends cc.Component {
         this.node.opacity = 255;
     }
 
+    onCollisionEnter(other: Node, self: Node) {
+        CC_DEBUG && cc.log("Star onCollisionEnter");
+        this.onPicked();
+    }
+
     //获取主角与星星间的距离
     getDistance() {
         let playerPos = this.game.player.node.position;
@@ -50,10 +55,10 @@ export default class Star extends cc.Component {
         //this.node.destroy();
     }
     update(dt) {
-        if (this.getDistance() < this.pickRadius) {
-            this.onPicked();
-            return;
-        }
+        // if (this.getDistance() < this.pickRadius) {
+        //     this.onPicked();
+        //     return;
+        // }
 
         // 根据 Game 脚本中的计时器更新星星的透明度
         let opacityRatio = 1 - this.game.timer / this.game.starDuration;
