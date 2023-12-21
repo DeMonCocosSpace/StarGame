@@ -1212,7 +1212,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 448,
+      "width": 804.55,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -1264,8 +1264,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "在星星消失前拾取他们，获得分数！",
-    "_N$string": "在星星消失前拾取他们，获得分数！",
+    "_string": "Pick up the stars before they disappear to gain points!",
+    "_N$string": "Pick up the stars before they disappear to gain points!",
     "_fontSize": 28,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -1684,12 +1684,12 @@
       "__id__": 21
     },
     "minStarDuration": 3,
-    "maxStarDuration": 5,
+    "maxStarDuration": 6,
     "playTips": {
       "__id__": 28
     },
-    "touchHint": "点击左半屏幕：向左加速\n点击右半屏幕：向右加速",
-    "keyboardHint": "A：向左加速\nD：向右加速",
+    "touchHint": "Tap the left half of the screen: accelerate to the left\nTap the right half of the screen: accelerate to the right",
+    "keyboardHint": "A: Accelerate to the left\nD: Accelerate to the right",
     "_id": "5fRFPDJ5pIQbXaWOhBA0SN"
   }
 ]
